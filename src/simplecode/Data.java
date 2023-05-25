@@ -25,9 +25,17 @@ public class Data {
     public String getData(){
         LocalDateTime datahora = LocalDateTime.now();
         this.dia = datahora.getDayOfMonth();
+        String d = "" + dia;
         this.mes = datahora.getMonthValue();
+        String m = " " + mes;
         this.ano = datahora.getYear();
-        String msg = dia + "/" + mes + "/" + ano;
+        if(dia < 10){
+            d = "0" + dia;
+        }
+        if(mes < 10){
+            m = "0" + mes;
+        }
+        String msg = d + "/" + m + "/" + ano;
         return msg;
     }
 
