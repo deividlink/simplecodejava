@@ -22,4 +22,12 @@ public class Hora {
         this.sec = dataHoraAtual.getSecond();
         return sec;
     } 
+    public String getHoras(){
+        LocalDateTime dataHoraAtual = LocalDateTime.now();
+        this.hora = dataHoraAtual.getHour();
+        this.min = dataHoraAtual.getMinute();
+        this.sec = dataHoraAtual.getSecond();
+        String msg = hora + ":" + min + ": " + sec;
+        return msg;
+    }
 }
