@@ -25,9 +25,23 @@ public class Hora {
     public String getHoras(){
         LocalDateTime dataHoraAtual = LocalDateTime.now();
         this.hora = dataHoraAtual.getHour();
+        String h = "" + hora;
         this.min = dataHoraAtual.getMinute();
+        String m = "" + min;
         this.sec = dataHoraAtual.getSecond();
-        String msg = hora + ":" + min + ": " + sec;
+        String s = "" + sec;
+        if(hora < 10){
+            h = "0" + hora; 
+        }
+        if(min < 10){
+            m = "0" + min;
+        }
+        if(sec < 10){
+            s= "0" + sec;
+        }
+
+
+        String msg = h + ":" + m + ": " + s;
         return msg;
     }
 }
